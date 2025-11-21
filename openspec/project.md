@@ -9,6 +9,7 @@ Sproutkit is a project scaffolding tool designed to help developers skip boilerp
 - TypeScript (strict mode enabled)
 - Node.js 24 or newer
 - Commander.js for CLI interface
+- Conf for configuration management
 - Rollup for bundling
 - pnpm for package management
 - ESLint + Prettier for code quality
@@ -44,6 +45,10 @@ Sproutkit is a project scaffolding tool designed to help developers skip boilerp
 - Build output: single ESM bundle in `dist/`
 - Source maps enabled in development, disabled in production
 - Build-time replacements for project metadata (`__projectName__`, `__projectDescription__`, `__projectVersion__`)
+- Configuration stored in platform-specific user directories via `conf` package:
+  - macOS: `~/Library/Preferences/sproutkit-nodejs/config.json`
+  - Linux: `~/.config/sproutkit-nodejs/config.json`
+  - Windows: `%APPDATA%/sproutkit-nodejs/Config/config.json`
 
 ### Testing Strategy
 
@@ -87,6 +92,7 @@ Sproutkit operates in the developer tooling space, specifically project initiali
 ### Runtime
 
 - Commander.js: CLI framework for command parsing and help generation
+- Conf: Configuration management with platform-appropriate storage, JSON schema validation, and atomic file writes
 
 ### Development
 

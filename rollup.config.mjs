@@ -24,7 +24,7 @@ export default defineConfig([
       format: "esm",
       sourcemap: !isProduction,
     },
-    external: ["commander", "os"],
+    external: ["commander", "conf", "fs", "os", "readline/promises"],
     plugins: [
       del({
         targets: `${outputDir}/*`,

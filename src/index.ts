@@ -7,12 +7,16 @@
 import { program } from "commander"
 import { EOL } from "os"
 
+import { createConfigCommand } from "@/commands/config"
+
 program
   .name("__projectName__")
   .description("__projectDescription__")
   .version("__projectVersion__", "--version", "Show the version and exit")
   .helpOption(undefined, "Show this message and exit")
   .addHelpText("after", EOL + "Homepage: https://github.com/mayekukhisa/sproutkit#readme")
+
+program.addCommand(createConfigCommand())
 
 program.parse(process.argv)
 

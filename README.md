@@ -36,6 +36,61 @@ To run this project, ensure the following software is installed on your system:
    bun dev
    ```
 
+## Configuration
+
+Sproutkit uses a configuration file to manage template sources. See [CONFIGURATION.md](CONFIGURATION.md) for detailed information about the configuration file structure and storage locations.
+
+### Config Commands
+
+#### Set Configuration Values
+
+Set a configuration value using dot notation for nested keys:
+
+```shell
+bun dev config set templates.sources.local "/path/to/templates"
+bun dev config set templates.sources.remote "https://example.com/templates"
+```
+
+#### List Configuration
+
+Display all current configuration settings:
+
+```shell
+bun dev config list
+```
+
+#### Delete Configuration Values
+
+Remove a specific configuration key:
+
+```shell
+bun dev config delete templates.sources.local
+```
+
+#### Reset Configuration
+
+Reset all configuration to defaults (with confirmation prompt):
+
+```shell
+bun dev config reset
+```
+
+### Template Sources
+
+Sproutkit supports two types of template sources:
+
+- **Local:** Paths to template directories
+
+  ```shell
+  bun dev config set templates.sources.local "/path/to/templates"
+  ```
+
+- **Remote:** URLs to template repositories
+  ```shell
+  bun dev config set templates.sources.remote "https://github.com/mayekukhisa/sproutkit-templates"
+  bun dev config set templates.sources.remote "https://example.com/templates"
+  ```
+
 ## License
 
 This tool is available under the terms of the [MIT license](LICENSE).

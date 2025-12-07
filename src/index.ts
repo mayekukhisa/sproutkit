@@ -7,6 +7,7 @@
 import { program } from "commander"
 import { EOL } from "os"
 
+import { createConfigCommand } from "@/commands/config"
 import { appInfo } from "@/lib/constants"
 
 program
@@ -14,7 +15,10 @@ program
   .description(appInfo.DESCRIPTION)
   .version(appInfo.VERSION, "--version", "Show the version and exit")
   .helpOption(undefined, "Show this message and exit")
+  .helpCommand("help [command]", "Display help for command")
   .addHelpText("after", EOL + `Homepage: ${appInfo.HOMEPAGE}`)
+
+program.addCommand(createConfigCommand())
 
 program.parse(process.argv)
 

@@ -87,6 +87,7 @@ Sproutkit operates in the developer tooling space, specifically project initiali
 ### Runtime
 
 - Commander.js: CLI framework for command parsing and help generation
+- conf: Configuration management with JSON schema validation and atomic writes
 
 ### Development
 

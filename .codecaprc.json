@@ -1,0 +1,10 @@
+{
+  "useYearRange": true,
+  "ruleSet": [
+    {
+      "target": "**/*.ts",
+      "headerFile": "codecap/header.txt",
+      "headerDelimiter": "^(?![\\/ ]\\*)."
+    }
+  ]
+}

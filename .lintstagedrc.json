@@ -1,0 +1,4 @@
+{
+  "*.ts": ["eslint --fix", "codecap --fix"],
+  "*.{json,md,yml}": "prettier --write"
+}

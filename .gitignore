@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Miscellaneous
+*.pem
+.DS_Store
+
+# Output
+*.tgz
+dist/
+out/
+
+# Testing
+*.lcov
+coverage/
+
+# TypeScript
+*.tsbuildinfo

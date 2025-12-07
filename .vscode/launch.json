@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "name": "Debug Project",
+      "type": "bun",
+      "request": "launch",
+      "program": "src/index.ts",
+      "args": ["${input:args}"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "args",
+      "type": "promptString",
+      "description": "Enter arguments to pass to the program",
+      "default": "--help"
+    }
+  ]
+}
